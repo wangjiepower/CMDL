@@ -15,7 +15,6 @@ dependencies:
   - nltk=3.6.2
   - pip:
     - annoy==1.17.0
-    - datasketch==1.5.3
     - elasticsearch==7.13.1
     - elasticsearch-dsl==7.3.0
     - gensim==3.8.3
