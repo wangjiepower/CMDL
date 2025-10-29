@@ -17,8 +17,6 @@ mamba env create -f environment.yml
 conda activate glaucus
 ```
 
-The updated specification installs `datasketch` and its `mmh3` dependency directly from conda-forge, so you no longer need the Visual C++ Build Tools just to satisfy those wheels. If you generated your environment before this change and run into build errors mentioning `mmh3`, run `mamba install datasketch=1.5.3 mmh3=3.0 -c conda-forge` inside the environment to pull the pre-built packages.
-
 > **GPU builds:** the default spec installs the CPU-only build of PyTorch 1.8.1. If you have a CUDA capable GPU, edit `environment.yml` and replace the `cpuonly` line with the appropriate `cudatoolkit` (for example `cudatoolkit=10.2`) **before** creating the environment.
 
 If you see solver errors about packages that no longer exist, re-run the command with `--override-channels -c conda-forge -c defaults -c pytorch` to force Conda to search the full mirrors.
