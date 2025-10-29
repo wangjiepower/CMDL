@@ -3,7 +3,8 @@
 Published at Very Large Databses (VLDB) 2023
 
 ### Set up:
-- environment.yml will set up a conda environment
+- `environment.yml` creates a Python 3.8 environment that works with the current conda-forge mirrors.  Install it with `mamba env create -f environment.yml` (or `conda env create -f environment.yml`).  For a Windows-specific walkthrough see [`docs/windows-setup.md`](docs/windows-setup.md).
+- The default spec installs the CPU build of PyTorch 1.8.1 via the `pytorch` channel.  If you have a CUDA-capable GPU, remove the `cpuonly` line and replace it with the appropriate `cudatoolkit` version before creating the environment.
 
 ### Entry points:
 - trainer/pretrain-text.ipynb: Fine tuning a language model on text corpus to learn text embeddings
